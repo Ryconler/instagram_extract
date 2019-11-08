@@ -6,7 +6,8 @@ const cheerio = require('cheerio');
 const iconv = require('iconv-lite');
 
 const devFlag = process.env.NODE_ENV !== 'production';
-const webDomain = devFlag ? 'http://localhost:8080' : 'https://www.jessezhu.cn';  // 前端域名
+// const webDomain = devFlag ? 'http://localhost:8080' : 'https://www.jessezhu.cn';  // 前端域名
+const webDomain = 'https://www.jessezhu.cn';  // 前端域名
 
 // 创建http server，并传入回调函数:
 const server = http.createServer(function (request, response) {
