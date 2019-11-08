@@ -69,7 +69,7 @@ function getInstagram(id, callback) {
                     const sharedDataStr = scriptText.match(/window._sharedData=(\S*);/)[1];
                     try {
                         const sharedData = JSON.parse(sharedDataStr);
-                        // console.log(sharedDataStr);
+                        console.log(sharedDataStr);
                         const shortcode_media = sharedData.entry_data.PostPage[0].graphql.shortcode_media;
                         if (shortcode_media.edge_sidecar_to_children) {  // 多张图片
                             const edges = sharedData.entry_data.PostPage[0].graphql.shortcode_media.edge_sidecar_to_children.edges;
